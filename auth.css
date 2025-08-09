@@ -1,0 +1,347 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: radial-gradient(circle at 1px 1px, #ddd 1px, transparent 0);
+  background-size: 20px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Kalam', cursive;
+  height: 100vh;
+  padding: 20px;
+}
+
+/* Headings & Text */
+h1 {
+  font-weight: bold;
+}
+p {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  margin: 20px 0 30px;
+  color: #333;
+}
+a {
+  color: #333;
+  font-size: 14px;
+  text-decoration: none;
+  margin: 15px 0;
+}
+
+/* Buttons */
+button {
+  border-radius: 20px;
+  border: 1px solid #FF4B2B;
+  background-color: #FF4B2B;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in, background 0.3s ease;
+  cursor: pointer;
+}
+button:active {
+  transform: scale(0.95);
+}
+button:focus {
+  outline: none;
+}
+button.ghost {
+  background-color: transparent;
+  border-color: #FFFFFF;
+}
+
+/* Form Styling */
+form {
+  background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 50px;
+  height: 100%;
+  text-align: center;
+}
+input {
+  background-color: #eee;
+  border: none;
+  padding: 12px 15px;
+  margin: 8px 0;
+  width: 100%;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+/* Container */
+.container {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25),
+              0 10px 10px rgba(0,0,0,0.22);
+  position: relative;
+  overflow: hidden;
+  width: 900px;
+  max-width: 100%;
+  min-height: 600px;
+}
+
+:root {
+  --ease-slide: cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+/* Form Containers */
+.form-container {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  transition: transform 0.9s var(--ease-slide);
+  width: 50%;
+}
+.sign-in-container {
+  left: 0;
+  z-index: 2;
+}
+.container.right-panel-active .sign-in-container {
+  transform: translateX(100%);
+}
+.sign-up-container {
+  left: 0;
+  z-index: 1;
+}
+.container.right-panel-active .sign-up-container {
+  transform: translateX(100%);
+  z-index: 5;
+}
+
+/* Overlay Container (Morph Animation) */
+.overlay-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.9s var(--ease-slide),
+              border-radius 0.9s var(--ease-slide);
+  z-index: 100;
+  border-top-left-radius: 300px;
+  border-bottom-left-radius: 300px;
+}
+.container.right-panel-active .overlay-container {
+  transform: translateX(-100%);
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 300px;
+  border-bottom-right-radius: 300px;
+}
+
+/* Overlay Gradient (Cheatsheet Theme) */
+.overlay {
+  background: linear-gradient(135deg, #4f46e5, #10b981, #f59e0b);
+  background-size: 200% 200%;
+  color: #FFFFFF;
+  position: relative;
+  left: -100%;
+  height: 100%;
+  width: 200%;
+  transform: translateX(0);
+  transition: transform 0.9s var(--ease-slide);
+}
+.container.right-panel-active .overlay {
+  transform: translateX(50%);
+}
+
+/* Overlay Panels */
+.overlay-panel {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  top: 0;
+  height: 100%;
+  width: 50%;
+}
+.overlay-left {
+  transform: translateX(-10%);
+}
+.overlay-right {
+  right: 0;
+}
+
+/* Fix: Vertically center Welcome Back */
+.overlay-panel h1 {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+.overlay-panel p {
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 260px;
+}
+
+/* Social Buttons */
+.social-container {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  color: white;
+  font-size: 20px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.social.google {
+  background: #db4437;
+}
+.social.github {
+  background: #24292e;
+}
+.social.linkedin {
+  background: #0077b5;
+}
+.social:hover {
+  transform: translateY(-3px);
+  opacity: 0.9;
+}
+
+/* Confirmation Toast */
+/* Confirmation Toast - Improved */
+.confirm-card {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #ffffff;
+  padding: 14px 18px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 260px;
+  border-left: 5px solid #10b981; /* brand accent */
+  animation: slideIn 0.5s ease, fadeOut 0.5s ease 4.5s forwards;
+  z-index: 2000;
+}
+
+/* Avatar / Icon */
+.confirm-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #10b981;
+}
+
+/* Text Styling */
+.confirm-content {
+  flex: 1;
+}
+.confirm-content h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #111827;
+}
+.confirm-content p {
+  margin: 3px 0 0;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* Close Button */
+.close-btn {
+  border: none;
+  background: transparent;
+  font-size: 18px;
+  cursor: pointer;
+  color: #9ca3af;
+  transition: color 0.2s ease;
+}
+.close-btn:hover {
+  color: #ef4444;
+}
+
+/* Animation Keyframes */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .container {
+    min-height: 750px;
+  }
+  .overlay-container {
+    display: none;
+  }
+  .form-container {
+    position: relative;
+    width: 100%;
+    transform: none !important;
+  }
+}
+/* Branding Header */
+/* Branding Header */
+.brand-header {
+  margin-bottom: 20px;
+}
+
+.brand-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.brand-logo {
+  height: 40px;
+  width: 40px;
+  object-fit: contain;
+}
+
+.brand-name {
+  font-size: 20px;
+  font-weight: 700;
+  color: #333333; /* Your brand color */
+  transition: color 0.3s ease;
+}
+
+.brand-link:hover .brand-name {
+  color: #444; /* Optional hover color */
+}
+
