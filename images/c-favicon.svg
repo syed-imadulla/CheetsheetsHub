@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <!-- Sticky note background -->
+  <rect x="32" y="32" width="448" height="448" rx="12" ry="12"
+        fill="#fff8b3" stroke="#b8a600" stroke-width="8"
+        transform="rotate(-3 256 256)"/>
+  
+  <!-- Big C letter -->
+  <text x="50%" y="54%" text-anchor="middle" dominant-baseline="middle"
+        font-family="Arial, Helvetica, sans-serif" font-size="280"
+        font-weight="bold" fill="#00599C" stroke="#003f6e" stroke-width="8" paint-order="stroke">
+    C
+  </text>
+</svg>
