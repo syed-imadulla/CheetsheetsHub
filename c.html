@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>C-Programming Cheatsheet</title>
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo">
+            <img src="images/logo.png" alt="Cheatsheets Hub Logo">
+            Cheatsheets Hub
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html" class="note-link">Home</a></li>
+            <li><a href="c.html" class="note-link note-yellow">C</a></li>
+            <li><a href="cpp.html" class="note-link note-green">C++</a></li>
+            <li><a href="python.html" class="note-link note-blue">Python</a></li>
+            <li><a href="javascript.html" class="note-link note-pink">JavaScript</a></li>
+        </ul>
+    </nav>
+
+    <h1>C-Programming Cheatsheet</h1>
+    <div class="notes-container">
+
+        <div class="note note-yellow">
+            <h3>Basic Structure</h3>
+            <code>#include &lt;stdio.h&gt;
+
+int main() {
+  printf("Hello, World!");
+  return 0;
+}</code>
+        </div>
+
+        <div class="note note-green">
+            <h3>Preprocessor</h3>
+            <ul>
+                <li><code>#include</code>: Includes header files like &lt;stdio.h&gt;, &lt;string.h&gt;,
+                    &lt;math.h&gt;,&lt;conio.h&gt; etc.</li>
+                <li><code>#define</code>: Defines constants.</li>
+            </ul>
+        </div>
+
+        <div class="note note-pink">
+            <h3>Variables</h3>
+            Declaration: <br><code>int age;</code><br>
+            Initialization: <br><code>char grade = 'A';</code>
+        </div>
+
+        <div class="note note-purple">
+            <h3>printf &amp; scanf</h3>
+            <ul>
+                <li>
+                    <b>printf (Output)</b><br>
+                    <code>printf("Age: %d", age);</code>
+                </li>
+                <br>
+                <li>
+                    <b>scanf (Input)</b><br>
+                    <code>scanf("%d", &age);</code><br>
+                    <b>Note:</b> Always use the address-of operator (`&`) for variables.
+                </li>
+            </ul>
+        </div>
+
+        <div class="note note-blue">
+            <h3>Data Types & Ranges</h3>
+            <ul>
+                <li><b> Sizes:</b> int(2/4), float(4), double(8), char(1) bytes.</li>
+                <li><b>char:</b> -128 to 127</li>
+                <li><b>int (16-bit):</b> -32k to 32k </li>
+                <li><b>int (32-bit):</b> -2B to 2B </li>
+                <li><b>float:</b> 3.4E-38 to 3.4E+38 </li>
+                <li><b>double:</b> 1.7E-308 to 1.7E+308 </li>
+
+            </ul>
+        </div>
+        <div class="note note-purple">
+            <h3>Operators</h3>
+            <ul>
+                <li><b>Arithmetic:</b> <code>+ - * / %</code></li>
+                <li><b>Relational:</b> <code>== != &gt; &lt; &gt;= &lt;=</code></li>
+                <li><b>Logical:</b> <code>&& || !</code></li>
+                <li><b>Bitwise:</b> <code>& | ^ ~ &lt;&lt; &gt;&gt;</code></li>
+            </ul>
+        </div>
+
+        <div class="note note-orange">
+            <h3>Type Conversion</h3>
+            <b>Implicit:</b>Low —&gt; High, no loss of data.<br><code>int + float = float;</code><br>
+
+            <b>Explicit (Casting):</b>High —&gt; Low, loss of data.<br><code>int a = (int)10.5;</code>
+        </div>
+
+        <div class="note note-yellow">
+            <h3>Control Structures</h3>
+            <ul>
+                <li><b>Conditional:</b><br><code>if, else if, else</code></li>
+                <li><code>switch-case-break</code></li>
+                <li><b>Unconditional:</b><br><code>break, continue, return, goto</code></li>
+                <li><b>Loops:</b><br><code>for, while, do-while</code></li>
+            </ul>
+        </div>
+
+        <div class="note note-green">
+            <h3>Functions</h3>
+            Declaration: <br><code>int add(int, int);</code><br>
+            Call: <br><code>int sum = add(5, 3);</code><br>
+            Supports call by value & call by reference.
+        </div>
+        <div class="note note-pink">
+            <h3>Types of Functions</h3>
+            <ul>
+                <li>1. No args & no return </li>
+                <li>2. With args & no return </li>
+                <li>3. No args & with return </li>
+                <li>4. With args & with return </li>
+            </ul>
+        </div>
+        <div class="note note-blue">
+            <h3>Pointers</h3>
+            Stores the memory address of another variable.<br>
+            <code>int x = 10;<br>int *ptr = &x;</code>
+            <br>
+            *ptr gets the value at x.
+        </div>
+
+        <div class="note note-pink">
+            <h3>Arrays</h3>
+            Collection of same-type elements.<br>
+            1D: <code>int a[5] = {10, 20};</code><br>
+            2D: <code>int b[2][3] = {<br>  {1, 2, 3}, <br>  {4, 5, 6}<br>};</code>
+        </div>
+
+        <div class="note note-purple">
+            <h3>Strings</h3>
+            Array of characters ending with `\0`.<br>
+            <code>char name[] = "Imad";</code><br>
+            use string.h for string functions like <code>strlen, strcpy, strcat.</code><br>
+            <b>Note:</b> No '&' in 'scanf '.
+        </div>
+        <div class="note note-orange">
+            <h3>String I/O Functions</h3>
+            <ul>
+                <li><b>gets:</b> Reads a line (Unsafe!)</li>
+                <li><b>puts:</b> Writes a string + `\n`</li>
+                <li><b>fgets:</b> Safely reads a line from a stream.</li>
+                <li><b>fputs:</b> Writes a string to a stream.</li>
+            </ul>
+        </div>
+        <div class="note note-yellow">
+            <h3>Structures</h3>
+            Collection of different data types. Each member has its own memory location.
+            <code>struct Student {
+    int id;
+    char name[50];
+};
+struct Student s1;
+s1.id = 101;</code>
+        </div>
+        <div class="note note-orange">
+            <h3>Unions</h3>
+            Collection of different data types in the same memory location. Only one member can hold a value at any
+            given time.
+            <code>union Data {
+    int i;
+    char str[20];
+};</code>
+        </div>
+        <div class="note note-yellow">
+            <h3>Typedef</h3>
+            Creates an alias for a data type.<br>
+            <code>typedef struct {
+    int id;
+    char name[20];
+} Student;<br>
+Student s1;</code>
+        </div>
+
+        <div class="note note-green">
+            <h3>Enum</h3>
+            Assigns names to integer constants.<br>
+            <code>enum Day {SUN, MON};
+enum Day d = MON;</code><br>
+            <b>Note:</b> Sturcture, Union and Enum are user-defined data types.
+        </div>
+
+        <div class="note note-blue">
+            <h3>File Handling</h3>
+            <code>FILE *fp;
+fp = fopen("file.txt", "w");
+
+fprintf(fp, "Text");
+fscanf(fp, "%d", &var);
+
+fclose(fp);</code>
+        </div>
+        <div class="note note-purple">
+            <h3>File Modes</h3>
+            <ul>
+                <li><b>"r":</b> Read Only (must exist)</li>
+                <li><b>"w":</b> Write Only (overwrites)</li>
+                <li><b>"a":</b> Append Only (creates)</li>
+                <li><b>"r+":</b> Read & Write</li>
+                <li><b>"w+":</b> Write & Read (overwrites)</li>
+                <li><b>"a+":</b> Append & Read</li>
+            </ul>
+        </div>
+        <div class="note note-pink">
+            <h3>Recursion</h3>
+            A function that calls itself.<br>
+            <code>return_type func(params) {
+  if (base_case)
+    return value;
+  else
+    return func(new_params);
+}</code>
+        </div>
+
+    </div>
+</body>
+
+</html>
