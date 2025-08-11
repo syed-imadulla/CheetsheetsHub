@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +10,13 @@
     <link rel="stylesheet" href="auth.css">
     <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
 </head>
+
 <body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+
     <div class="container" id="container">
         <!-- Sign Up Form -->
         <div class="form-container sign-up-container">
@@ -102,16 +109,23 @@
                 <div id="recaptcha-container"></div>
                 <div class="otp-actions">
                     <button id="sendOTP">Send OTP</button>
-                    <button id="resendOTP" disabled>Resend OTP <span class="countdown" id="resendCountdown"></span></button>
+                    <button id="resendOTP" disabled>Resend OTP <span class="countdown"
+                            id="resendCountdown"></span></button>
                 </div>
                 <input type="text" id="otpCode" placeholder="Enter 6-digit OTP" maxlength="6" style="display:none" />
                 <button id="verifyOTP" style="display:none" disabled>Verify OTP</button>
             </div>
         </div>
     </div>
+    <script>
+        window.addEventListener("load", function () {
+            document.getElementById("preloader").style.display = "none";
+        });
+    </script>
 
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
     <script src="auth.js"></script>
 </body>
+
 </html>

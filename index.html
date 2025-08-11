@@ -9,6 +9,11 @@
 </head>
 
 <body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+
     <nav class="navbar">
         <a href="index.html" class="nav-logo">
             <img src="images/logo.png" alt="Cheatsheets Hub Logo">
@@ -50,6 +55,12 @@
             <p>DOM, ES6+, events, async.</p>
         </a>
     </div>
+    <script>
+        window.addEventListener("load", function () {
+            document.getElementById("preloader").style.display = "none";
+        });
+    </script>
+
 </body>
 
 </html>
