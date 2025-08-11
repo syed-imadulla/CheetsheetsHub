@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>C++ Programming Cheatsheet</title>
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo">
+            <img src="images/logo.png" alt="Cheatsheets Hub Logo">
+            Cheatsheets Hub
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html" class="note-link note-pink">Home</a></li>
+            <li><a href="c.html" class="note-link note-yellow">C</a></li>
+            <li><a href="cpp.html" class="note-link note-green">C++</a></li>
+            <li><a href="python.html" class="note-link note-purple">Python</a></li>
+            <li><a href="javascript.html" class="note-link note-orange">JavaScript</a></li>
+            <li><a href="login.html" class="note-link note-blue">Login</a></li>
+        </ul>
+    </nav>
+
+    <h1>C++ Programming Cheatsheet</h1>
+    <div class="notes-container">
+
+        <div class="note note-yellow">
+            <h3>Basic Structure</h3>
+            <code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    cout << "Hello, World!";
+    return 0;
+}</code>
+        </div>
+
+        <div class="note note-green">
+            <h3>Preprocessor</h3>
+            <ul>
+                <li><code>#include</code>: Includes header files like &lt;iostream&gt;, &lt;string&gt;, &lt;cmath&gt;,
+                    &lt;fstream&gt;</li>
+                <li><code>#define</code>: Defines constants/macros</li>
+            </ul>
+        </div>
+
+        <div class="note note-pink">
+            <h3>Variables</h3>
+            Declaration: <br><code>int age;</code><br>
+            Initialization: <br><code>char grade = 'A';</code>
+        </div>
+
+        <div class="note note-purple">
+            <h3>cout & cin</h3>
+            <ul>
+                <li>
+                    <b>cout (Output)</b><br>
+                    <code>cout << "Age: " << age;</code>
+                </li>
+                <br>
+                <li>
+                    <b>cin (Input)</b><br>
+                    <code>cin >> age;</code><br>
+                    <b>Note:</b> For strings with spaces, use <code>getline(cin, var);</code>
+                </li>
+            </ul>
+        </div>
+
+        <div class="note note-blue">
+            <h3>Data Types & Ranges</h3>
+            <ul>
+                <li><b>Sizes:</b> int(4), float(4), double(8), char(1) bytes</li>
+                <li><b>char:</b> -128 to 127</li>
+                <li><b>int:</b> -2B to 2B</li>
+                <li><b>float:</b> -3.4E+38 to 3.4E+38</li>
+                <li><b>double:</b> -1.7E+308 to 1.7E+308</li>
+            </ul>
+        </div>
+
+        <div class="note note-purple">
+            <h3>Operators</h3>
+            <ul>
+                <li><b>Arithmetic:</b> <code>+ - * / %</code></li>
+                <li><b>Relational:</b> <code>== != > < >= <=</code></li>
+                <li><b>Logical:</b> <code>&& || !</code></li>
+                <li><b>Bitwise:</b> <code>& | ^ ~ << >></code></li>
+            </ul>
+        </div>
+
+        <div class="note note-orange">
+            <h3>Type Conversion</h3>
+            <b>Implicit:</b> Low → High, safe<br>
+            <code>int a = 5; float b = a;</code><br>
+            <b>Explicit (Casting):</b> High → Low, may lose data<br>
+            <code>int a = (int)5.5;</code>
+        </div>
+
+        <div class="note note-yellow">
+            <h3>Control Structures</h3>
+            <ul>
+                <li><b>Conditional:</b> <br><code>if, else if, else</code></li>
+                <li><code>switch-case-break</code></li>
+                <li><b>Unconditional:</b> <code>break, continue</code></li>
+                <li><b>Loops:</b> <code>for, while, do-while</code></li>
+            </ul>
+        </div>
+
+        <div class="note note-green">
+            <h3>Functions</h3>
+            Declaration: <br><code>int add(int, int);</code><br>
+            Call: <br><code>sum = add(5, 3);</code><br>
+            Supports call by value & call by reference.
+        </div>
+
+        <div class="note note-pink">
+            <h3>Types of Functions</h3>
+            <ul>
+                <li>1. No args & no return</li>
+                <li>2. Args & no return</li>
+                <li>3. No args & with return</li>
+                <li>4. Args & with return</li>
+            </ul>
+        </div>
+
+        <div class="note note-blue">
+            <h3>Pointers</h3>
+            Stores memory address of another variable.<br>
+            <code>int x = 10;<br>int *ptr = &x;<br>*ptr = 20;</code>
+            <br>
+            *ptr gets the value at x.
+        </div>
+
+        <div class="note note-pink">
+            <h3>Arrays</h3>
+            Collection of same-type elements.<br>
+            1D: <code>int a[3] = {10, 20, 30};</code><br>
+            2D: <code>int b[2][3] = {<br>{1, 2, 3},<br>{4, 5, 6}<br>};</code>
+        </div>
+
+        <div class="note note-purple">
+            <h3>Strings</h3>
+            Array of characters ending with `\0`.<br>
+            <code>string name[] = "Imad";</code><br>
+            use &lt;string&gt; class for string functions like <code>length(), append(), substr().</code><br>
+        </div>
+
+        <div class="note note-orange">
+            <h3>String I/O Functions</h3>
+            <ul>
+                <li><code>getline(cin, str)</code> - Reads full line (including spaces)</li>
+                <li><code>cin >> str</code> - Reads up to space</li>
+                <li><code>s.append("...")</code> - Concatenate</li>
+                <li><code>s.find("...")</code> - Search</li>
+            </ul>
+        </div>
+
+        <div class="note note-yellow">
+            <h3>Structures</h3>
+            Collection of different data types. Each member has its own memory location.<br>
+            <code>struct Student {
+    int id;
+    string name;
+};
+struct Student s1;
+s1.id = 101;</code>
+        </div>
+        <div class="note note-orange">
+            <h3>Unions</h3>
+            Collection of different data types in the same memory location. Only one member can hold a value at any
+            given time.
+            <code>union Data {
+    int i;
+    char str[20];
+};</code>
+        </div>
+        <div class="note note-yellow">
+            <h3>Typedef</h3>
+            Creates an alias for a data type.<br>
+            <code>typedef struct {
+    int id;
+    char name[20];
+} Student;<br>
+Student s1;</code>
+        </div>
+
+        <div class="note note-green">
+            <h3>Enum</h3>
+            Assigns names to integer constants.<br>
+            <code>enum Day {SUN, MON};
+enum Day d = MON;</code><br>
+            <b>Note:</b> Sturcture, Union and Enum are user-defined data types.
+        </div>
+        <div class="note note-green">
+            <h3>Classes & Objects</h3>
+            Classes are blueprint for creating objects.<br>
+            <code>class MyClass {
+  public:
+    void display() { 
+        cout << "Hello"; 
+    }
+};
+MyClass obj;
+obj.display();</code>
+        </div>
+
+        <div class="note note-blue">
+            <h3>OOP Concepts</h3>
+            <ul>
+                <li><b>Encapsulation:</b> Hide data (3 P's)</li>
+                <li><b>Inheritance:</b> Acquire properties from another class</li>
+                <li><b>Polymorphism:</b> Many forms (overloading/overriding)</li>
+                <li><b>Abstraction:</b> Hide implementation details</li>
+            </ul>
+        </div>
+
+        <div class="note note-yellow">
+            <h3>File Basics</h3>
+            <code>#include &lt;fstream&gt;
+    // Write
+ofstream out("file.txt"); 
+    // Read
+ifstream in("file.txt"); 
+    // Both
+fstream file("file.txt"); </code>
+        </div>
+        <div class="note note-blue">
+    <h3>File Handling</h3>
+    <table style="width:100%; font-size:0.9em;">
+        <tr>
+            <th>Operations</th>
+            <th>Modes</th>
+        </tr>
+        <tr>
+            <td><code>file << data</code></td>
+            <td><code>ios::in</code></td>
+        </tr>
+        <tr>
+            <td><code>file >> var</code></td>
+            <td><code>ios::out</code></td>
+        </tr>
+        <tr>
+            <td><code>getline()</code></td>
+            <td><code>ios::app</code></td>
+        </tr>
+        <tr>
+            <td><code>close()</code></td>
+            <td><code>ios::binary</code></td>
+        </tr>
+    </table>
+    <div style="margin-top:8px; text-align:center; font-size:0.8em;">
+        <code>#include &lt;fstream&gt;</code>
+    </div>
+</div>
+
+        <div class="note note-pink">
+            <h3>Exception Handling</h3>
+            Handles runtime errors gracefully without stopping program execution.<br>
+            <code>try {
+  throw 1; 
+}catch (int e) { 
+  cout << e; 
+}</code>
+        </div>
+
+        <div class="note note-orange">
+            <h3>Recursion</h3>
+            A function that calls itself.<br>
+            <code>return_type func(params) {
+  if (base_case)
+    return value;
+  else
+    return func(new_params);
+}</code>
+        </div>
+
+    </div>
+    <script>
+        window.addEventListener("load", function () {
+            document.getElementById("preloader").style.display = "none";
+        });
+    </script>
+
+</body>
+
+</html>
