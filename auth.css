@@ -449,7 +449,7 @@
             }
         }
 
-        /* Simple Preloader */
+        /* Preloader Overlay */
         #preloader {
             position: fixed;
             top: 0;
@@ -457,25 +457,26 @@
             width: 100%;
             height: 100%;
             background: #ffffff;
-            /* Matches site background */
+            /* Match site background */
             display: flex;
             justify-content: center;
             align-items: center;
             z-index: 2000;
         }
 
-        /* Loader animation */
+        /* The Loader */
         .loader {
-            border: 6px solid #f3f3f3;
-            /* Light grey */
-            border-top: 6px solid #333;
-            /* Dark grey (can match your theme color) */
+            border: 6px solid #fff8b3;
+            /* Pastel yellow */
+            border-top: 6px solid #b3e0ff;
+            /* Pastel blue */
             border-radius: 50%;
             width: 50px;
             height: 50px;
-            animation: spin 1s linear infinite;
+            animation: spin 1s linear infinite, colorchange 3s ease-in-out infinite;
         }
 
+        /* Spin animation */
         @keyframes spin {
             0% {
                 transform: rotate(0deg);
@@ -483,5 +484,23 @@
 
             100% {
                 transform: rotate(360deg);
+            }
+        }
+
+        /* Swap pastel colors for theme match */
+        @keyframes colorchange {
+            0% {
+                border: 6px solid #fff8b3;
+                border-top: 6px solid #b3e0ff;
+            }
+
+            50% {
+                border: 6px solid #b3e0ff;
+                border-top: 6px solid #fff8b3;
+            }
+
+            100% {
+                border: 6px solid #fff8b3;
+                border-top: 6px solid #b3e0ff;
             }
         }

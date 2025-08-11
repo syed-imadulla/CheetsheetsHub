@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap');
 
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
 }
@@ -26,9 +27,10 @@ body {
     background-color: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(4px);
 
-    border: 3px solid #999; /* changed border color */
+    border: 3px solid #999;
+    /* changed border color */
     border-radius: 10px;
-    box-shadow: 4px 4px 10px rgba(33,33,33,0.5);
+    box-shadow: 4px 4px 10px rgba(33, 33, 33, 0.5);
     margin: 8px 10px;
 }
 
@@ -41,14 +43,15 @@ body {
     font-size: 24px;
     font-weight: bold;
     color: #333;
-    text-decoration: none; /* remove underline */
+    text-decoration: none;
+    /* remove underline */
 }
 
 .nav-logo img {
     height: 40px;
     width: auto;
     border-radius: 6px;
-    box-shadow: 2px 2px 4px rgba(0,0,0,0.15);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
 }
 
 
@@ -67,7 +70,7 @@ body {
     font-size: 16px;
     color: #333;
     text-decoration: none;
-    box-shadow: 3px 3px 5px rgba(33,33,33,.3);
+    box-shadow: 3px 3px 5px rgba(33, 33, 33, .3);
     border-radius: 6px;
     transform: rotate(-1deg);
     transition: transform 0.15s ease, box-shadow 0.15s ease;
@@ -75,16 +78,33 @@ body {
 
 .note-link:hover {
     transform: scale(1.05) rotate(1deg);
-    box-shadow: 5px 5px 8px rgba(33,33,33,.4);
+    box-shadow: 5px 5px 8px rgba(33, 33, 33, .4);
 }
 
 /* Sticky-note colors for nav buttons */
-.note-yellow { background-color: #fff8b3; }
-.note-green  { background-color: #d4ffb3; }
-.note-blue   { background-color: #b3e0ff; }
-.note-pink   { background-color: #ffb3d1; }
-.note-purple { background-color: #e6b3ff; }
-.note-orange { background-color: #ffc4b3; }
+.note-yellow {
+    background-color: #fff8b3;
+}
+
+.note-green {
+    background-color: #d4ffb3;
+}
+
+.note-blue {
+    background-color: #b3e0ff;
+}
+
+.note-pink {
+    background-color: #ffb3d1;
+}
+
+.note-purple {
+    background-color: #e6b3ff;
+}
+
+.note-orange {
+    background-color: #ffc4b3;
+}
 
 h1 {
     text-align: center;
@@ -92,7 +112,7 @@ h1 {
     font-size: 42px;
     color: #222;
     margin-bottom: 5px;
-    text-shadow: 2px 2px 3px rgba(0,0,0,0.1);
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
 }
 
 p.tagline {
@@ -116,7 +136,7 @@ p.tagline {
     padding: 20px;
     font-family: 'Kalam', cursive;
     font-size: 16px;
-    box-shadow: 5px 5px 7px rgba(33,33,33,.4);
+    box-shadow: 5px 5px 7px rgba(33, 33, 33, .4);
     transition: transform .15s linear, box-shadow .15s ease;
     display: flex;
     flex-direction: column;
@@ -132,7 +152,7 @@ p.tagline {
     width: 48px;
     height: 48px;
     border-radius: 8px;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     margin-bottom: 10px;
     transition: transform 0.2s ease;
 }
@@ -143,7 +163,7 @@ p.tagline {
 
 .note:hover {
     transform: translateY(-5px) scale(1.05);
-    box-shadow: 8px 8px 15px rgba(0,0,0,.25);
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, .25);
     z-index: 5;
 }
 
@@ -154,7 +174,7 @@ p.tagline {
     text-align: center;
     margin-top: 0;
     margin-bottom: 10px;
-    border-bottom: 1px solid rgba(0,0,0,0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     padding-bottom: 5px;
 }
 
@@ -163,12 +183,35 @@ p.tagline {
     margin: 0;
 }
 
-.note-yellow { background-color: #fff8b3; transform: rotate(-1deg);}
-.note-green  { background-color: #d4ffb3; transform: rotate(1deg); }
-.note-blue   { background-color: #b3e0ff; transform: rotate(1.5deg);}
-.note-pink   { background-color: #ffb3d1; transform: rotate(-0.5deg); }
-.note-purple { background-color: #e6b3ff; transform: rotate(2deg); }
-.note-orange { background-color: #ffc4b3; transform: rotate(-1.5deg); }
+.note-yellow {
+    background-color: #fff8b3;
+    transform: rotate(-1deg);
+}
+
+.note-green {
+    background-color: #d4ffb3;
+    transform: rotate(1deg);
+}
+
+.note-blue {
+    background-color: #b3e0ff;
+    transform: rotate(1.5deg);
+}
+
+.note-pink {
+    background-color: #ffb3d1;
+    transform: rotate(-0.5deg);
+}
+
+.note-purple {
+    background-color: #e6b3ff;
+    transform: rotate(2deg);
+}
+
+.note-orange {
+    background-color: #ffc4b3;
+    transform: rotate(-1.5deg);
+}
 
 @media (max-width: 768px) {
     .note {
@@ -176,32 +219,58 @@ p.tagline {
     }
 }
 
-/* Simple Preloader */
+/* Preloader Overlay */
 #preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #ffffff; /* Matches site background */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 2000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    /* Match site background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
 }
 
-/* Loader animation */
+/* The Loader */
 .loader {
-  border: 6px solid #f3f3f3; /* Light grey */
-  border-top: 6px solid #333; /* Dark grey (can match your theme color) */
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  animation: spin 1s linear infinite;
+    border: 6px solid #fff8b3;
+    /* Pastel yellow */
+    border-top: 6px solid #b3e0ff;
+    /* Pastel blue */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite, colorchange 3s ease-in-out infinite;
 }
 
+/* Spin animation */
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
+/* Swap pastel colors for theme match */
+@keyframes colorchange {
+    0% {
+        border: 6px solid #fff8b3;
+        border-top: 6px solid #b3e0ff;
+    }
+
+    50% {
+        border: 6px solid #b3e0ff;
+        border-top: 6px solid #fff8b3;
+    }
+
+    100% {
+        border: 6px solid #fff8b3;
+        border-top: 6px solid #b3e0ff;
+    }
+}

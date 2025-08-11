@@ -1,282 +1,311 @@
 @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap');
 
- body {
-   font-family: 'Kalam', cursive;
-   background-color: #ffffff;
-   background-image: radial-gradient(#a9a9a9 1px, transparent 1px);
-   background-size: 20px 20px;
-   margin: 0;
-   padding: 15px;
- }
+body {
+  font-family: 'Kalam', cursive;
+  background-color: #ffffff;
+  background-image: radial-gradient(#a9a9a9 1px, transparent 1px);
+  background-size: 20px 20px;
+  margin: 0;
+  padding: 15px;
+}
 
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 20px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 
-    background-color: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(4px);
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(4px);
 
-    border: 3px solid #999; /* changed border color */
-    border-radius: 10px;
-    box-shadow: 4px 4px 10px rgba(33,33,33,0.5);
-    margin: 8px 10px;
+  border: 3px solid #999;
+  /* changed border color */
+  border-radius: 10px;
+  box-shadow: 4px 4px 10px rgba(33, 33, 33, 0.5);
+  margin: 8px 10px;
 }
 
 .nav-logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-family: 'Kalam', cursive;
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-    text-decoration: none; /* remove underline */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Kalam', cursive;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+  /* remove underline */
 }
 
 .nav-logo img {
-    height: 40px;
-    width: auto;
-    border-radius: 6px;
-    box-shadow: 2px 2px 4px rgba(0,0,0,0.15);
+  height: 40px;
+  width: auto;
+  border-radius: 6px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
 }
 
 
- .nav-links {
-   list-style: none;
-   display: flex;
-   gap: 12px;
-   margin: 0;
-   padding: 0;
- }
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+}
 
- .note-link {
-   display: inline-block;
-   padding: 8px 14px;
-   font-family: 'Kalam', cursive;
-   font-size: 16px;
-   color: #333;
-   text-decoration: none;
-   box-shadow: 3px 3px 5px rgba(33, 33, 33, .3);
-   border-radius: 6px;
-   transform: rotate(-1deg);
-   transition: transform 0.15s ease, box-shadow 0.15s ease;
- }
+.note-link {
+  display: inline-block;
+  padding: 8px 14px;
+  font-family: 'Kalam', cursive;
+  font-size: 16px;
+  color: #333;
+  text-decoration: none;
+  box-shadow: 3px 3px 5px rgba(33, 33, 33, .3);
+  border-radius: 6px;
+  transform: rotate(-1deg);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
 
- .note-link:hover {
-   transform: scale(1.05) rotate(1deg);
-   box-shadow: 5px 5px 8px rgba(33, 33, 33, .4);
- }
+.note-link:hover {
+  transform: scale(1.05) rotate(1deg);
+  box-shadow: 5px 5px 8px rgba(33, 33, 33, .4);
+}
 
- /* Sticky-note colors for nav buttons */
- .note-yellow {
-   background-color: #fff8b3;
- }
+/* Sticky-note colors for nav buttons */
+.note-yellow {
+  background-color: #fff8b3;
+}
 
- .note-green {
-   background-color: #d4ffb3;
- }
+.note-green {
+  background-color: #d4ffb3;
+}
 
- .note-blue {
-   background-color: #b3e0ff;
- }
+.note-blue {
+  background-color: #b3e0ff;
+}
 
- .note-pink {
-   background-color: #ffb3d1;
- }
+.note-pink {
+  background-color: #ffb3d1;
+}
 
- h1 {
-   text-align: center;
-   font-family: 'Kalam', cursive;
-   color: #333;
- }
+h1 {
+  text-align: center;
+  font-family: 'Kalam', cursive;
+  color: #333;
+}
 
- .notes-container {
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: center;
-   gap: 20px;
- }
+.notes-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
 
- .note {
-   width: 245px;
-   min-height: 230px;
-   padding: 15px;
-   font-family: 'Kalam', cursive;
-   font-size: 15px;
-   box-shadow: 5px 5px 7px rgba(33, 33, 33, .7);
-   transition: transform .15s linear;
-   display: flex;
-   flex-direction: column;
- }
+.note {
+  width: 245px;
+  min-height: 230px;
+  padding: 15px;
+  font-family: 'Kalam', cursive;
+  font-size: 15px;
+  box-shadow: 5px 5px 7px rgba(33, 33, 33, .7);
+  transition: transform .15s linear;
+  display: flex;
+  flex-direction: column;
+}
 
- .note:hover {
-   transform: scale(1.1);
-   z-index: 5;
- }
+.note:hover {
+  transform: scale(1.1);
+  z-index: 5;
+}
 
- .note h3 {
-   font-family: 'Roboto', sans-serif;
-   font-weight: 700;
-   font-size: 18px;
-   text-align: center;
-   margin-top: 0;
-   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-   padding-bottom: 5px;
- }
+.note h3 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding-bottom: 5px;
+}
 
- .note ul {
-   list-style-type: none;
-   padding: 0;
-   flex-grow: 1;
- }
+.note ul {
+  list-style-type: none;
+  padding: 0;
+  flex-grow: 1;
+}
 
- .note code {
-   font-family: 'Courier New', Courier, monospace;
-   background-color: rgba(0, 0, 0, 0.1);
-   padding: 2px 4px;
-   border-radius: 3px;
-   font-size: 14px;
-   display: inline-block;
-   white-space: pre;
- }
+.note code {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-size: 14px;
+  display: inline-block;
+  white-space: pre;
+}
 
- .note-yellow {
-   background-color: #fff8b3;
-   transform: rotate(-2deg);
- }
+.note-yellow {
+  background-color: #fff8b3;
+  transform: rotate(-2deg);
+}
 
- .note-green {
-   background-color: #d4ffb3;
-   transform: rotate(1deg);
- }
+.note-green {
+  background-color: #d4ffb3;
+  transform: rotate(1deg);
+}
 
- .note-blue {
-   background-color: #b3e0ff;
-   transform: rotate(2deg);
- }
+.note-blue {
+  background-color: #b3e0ff;
+  transform: rotate(2deg);
+}
 
- .note-pink {
-   background-color: #ffb3d1;
-   transform: rotate(-1deg);
- }
+.note-pink {
+  background-color: #ffb3d1;
+  transform: rotate(-1deg);
+}
 
- .note-purple {
-   background-color: #e6b3ff;
-   transform: rotate(3deg);
- }
+.note-purple {
+  background-color: #e6b3ff;
+  transform: rotate(3deg);
+}
 
- .note-orange {
-   background-color: #ffc4b3;
-   transform: rotate(-3deg);
- }
+.note-orange {
+  background-color: #ffc4b3;
+  transform: rotate(-3deg);
+}
 
- /* @media print {
+/* @media print {
             body { background-color: #fff; }
             .notes-container { gap: 15px; }
             .note { box-shadow: 2px 2px 5px #ccc; min-height: 230px; }
         } */
 
- /* --- General Print Styles --- */
- @media print {
-   body {
-     background: none;
-     /* Helps force the browser to print background colors */
-     -webkit-print-color-adjust: exact;
-     print-color-adjust: exact;
-   }
+/* --- General Print Styles --- */
+@media print {
+  body {
+    background: none;
+    /* Helps force the browser to print background colors */
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
 
-   h1 {
-     font-size: 20pt;
-     text-align: center;
-     margin-bottom: 10px;
-   }
+  h1 {
+    font-size: 20pt;
+    text-align: center;
+    margin-bottom: 10px;
+  }
 
-   .notes-container {
-     display: grid;
-     /* Use grid for precise layouts */
-   }
+  .notes-container {
+    display: grid;
+    /* Use grid for precise layouts */
+  }
 
-   .note {
-     page-break-inside: avoid;
-     /* Tries to keep notes on one page */
-     box-shadow: none;
-     /* Removes shadows */
-     transform: none;
-     /* Removes rotation */
-     border: 1px solid rgba(0, 0, 0, 0.2);
-     width: auto;
-     min-height: initial;
-     /* Lets content define height */
-   }
+  .note {
+    page-break-inside: avoid;
+    /* Tries to keep notes on one page */
+    box-shadow: none;
+    /* Removes shadows */
+    transform: none;
+    /* Removes rotation */
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    width: auto;
+    min-height: initial;
+    /* Lets content define height */
+  }
 
-   .note:hover {
-     transform: none;
-   }
- }
+  .note:hover {
+    transform: none;
+  }
+}
 
- /* --- Portrait Layout: 3 Columns --- */
- @media print and (orientation: portrait) {
-   body {
-     font-size: 9pt;
-   }
+/* --- Portrait Layout: 3 Columns --- */
+@media print and (orientation: portrait) {
+  body {
+    font-size: 9pt;
+  }
 
-   .notes-container {
-     grid-template-columns: repeat(2, 1fr);
-     gap: 10px;
-   }
+  .notes-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
 
-   .note {
-     padding: 8px;
-   }
- }
+  .note {
+    padding: 8px;
+  }
+}
 
- /* --- Landscape Layout: 4 Columns --- */
- @media print and (orientation: landscape) {
-   body {
-     font-size: 9pt;
-   }
+/* --- Landscape Layout: 4 Columns --- */
+@media print and (orientation: landscape) {
+  body {
+    font-size: 9pt;
+  }
 
-   /* Larger font for wider columns */
-   .notes-container {
-     grid-template-columns: repeat(3, 1fr);
-     gap: 10px;
-   }
+  /* Larger font for wider columns */
+  .notes-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
 
-   .note {
-     padding: 8px;
-   }
- }
+  .note {
+    padding: 8px;
+  }
+}
 
- /* Simple Preloader */
+/* Preloader Overlay */
 #preloader {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: #ffffff; /* Matches site background */
+  background: #ffffff;
+  /* Match site background */
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 2000;
 }
 
-/* Loader animation */
+/* The Loader */
 .loader {
-  border: 6px solid #f3f3f3; /* Light grey */
-  border-top: 6px solid #333; /* Dark grey (can match your theme color) */
+  border: 6px solid #fff8b3;
+  /* Pastel yellow */
+  border-top: 6px solid #b3e0ff;
+  /* Pastel blue */
   border-radius: 50%;
   width: 50px;
   height: 50px;
-  animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite, colorchange 3s ease-in-out infinite;
 }
 
+/* Spin animation */
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Swap pastel colors for theme match */
+@keyframes colorchange {
+  0% {
+    border: 6px solid #fff8b3;
+    border-top: 6px solid #b3e0ff;
+  }
+
+  50% {
+    border: 6px solid #b3e0ff;
+    border-top: 6px solid #fff8b3;
+  }
+
+  100% {
+    border: 6px solid #fff8b3;
+    border-top: 6px solid #b3e0ff;
+  }
 }
