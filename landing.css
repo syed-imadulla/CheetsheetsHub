@@ -83,6 +83,8 @@ body {
 .note-green  { background-color: #d4ffb3; }
 .note-blue   { background-color: #b3e0ff; }
 .note-pink   { background-color: #ffb3d1; }
+.note-purple { background-color: #e6b3ff; }
+.note-orange { background-color: #ffc4b3; }
 
 h1 {
     text-align: center;

@@ -1,20 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
-  <!-- Sticky note background (blue note) -->
-  <rect x="32" y="32" width="448" height="448" rx="16" ry="16"
-        fill="#b3e0ff" stroke="#6aa8cc" stroke-width="8"
-        transform="rotate(-3 256 256)" />
-
-  <!-- Subtle shadow border -->
-  <rect x="32" y="32" width="448" height="448" rx="16" ry="16"
-        fill="none" stroke="rgba(0,0,0,0.12)" stroke-width="6"
-        transform="rotate(-3 256 256)" />
-
-  <!-- .py text with Python colors -->
-  <text x="50%" y="54%" text-anchor="middle" dominant-baseline="middle"
-        font-family="Kalam, 'Helvetica Neue', Arial, sans-serif"
-        font-size="170" font-weight="700"
-        fill="#3776AB" stroke="#083a5a" stroke-width="6" paint-order="stroke"
-        transform="rotate(-5 256 256)">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Purple sticky note background -->
+  <rect x="0" y="0" width="200" height="200" rx="20" ry="20" fill="#8e44ad" stroke="#6d2f88" stroke-width="4"/>
+  
+  <!-- .py text -->
+  <text x="50%" y="55%" font-family="Kalam, sans-serif" font-size="72" font-weight="bold" fill="white" text-anchor="middle" dominant-baseline="middle">
     .py
   </text>
 </svg>
