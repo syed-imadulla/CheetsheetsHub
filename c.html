@@ -52,13 +52,13 @@ int main() {
             </ul>
         </div>
 
-        <div class="note note-pink">
+        <div class="note note-blue">
             <h3>Variables</h3>
             Declaration: <br><code>int age;</code><br>
             Initialization: <br><code>char grade = 'A';</code>
         </div>
 
-        <div class="note note-purple">
+        <div class="note note-pink">
             <h3>printf &amp; scanf</h3>
             <ul>
                 <li>
@@ -74,7 +74,7 @@ int main() {
             </ul>
         </div>
 
-        <div class="note note-blue">
+        <div class="note note-purple">
             <h3>Data Types & Ranges</h3>
             <ul>
                 <li><b> Sizes:</b> int(2/4), float(4), double(8), char(1) bytes.</li>
@@ -86,7 +86,7 @@ int main() {
 
             </ul>
         </div>
-        <div class="note note-purple">
+        <div class="note note-orange">
             <h3>Operators</h3>
             <ul>
                 <li><b>Arithmetic:</b> <code>+ - * / %</code></li>
@@ -96,14 +96,14 @@ int main() {
             </ul>
         </div>
 
-        <div class="note note-orange">
+        <div class="note note-blue">
             <h3>Type Conversion</h3>
             <b>Implicit:</b>Low —&gt; High, no loss of data.<br><code>int + float = float;</code><br>
 
             <b>Explicit (Casting):</b>High —&gt; Low, loss of data.<br><code>int a = (int)10.5;</code>
         </div>
 
-        <div class="note note-yellow">
+        <div class="note note-pink">
             <h3>Control Structures</h3>
             <ul>
                 <li><b>Conditional:</b><br><code>if, else if, else</code></li>
@@ -113,13 +113,13 @@ int main() {
             </ul>
         </div>
 
-        <div class="note note-green">
+        <div class="note note-purple">
             <h3>Functions</h3>
             Declaration: <br><code>int add(int, int);</code><br>
             Call: <br><code>int sum = add(5, 3);</code><br>
             Supports call by value & call by reference.
         </div>
-        <div class="note note-pink">
+        <div class="note note-orange">
             <h3>Types of Functions</h3>
             <ul>
                 <li>1. No args & no return </li>
@@ -128,7 +128,7 @@ int main() {
                 <li>4. With args & with return </li>
             </ul>
         </div>
-        <div class="note note-blue">
+        <div class="note note-yellow">
             <h3>Pointers</h3>
             Stores the memory address of another variable.<br>
             <code>int x = 10;<br>int *ptr = &x;</code>
@@ -136,7 +136,7 @@ int main() {
             *ptr gets the value at x.
         </div>
 
-        <div class="note note-pink">
+        <div class="note note-green">
             <h3>Arrays</h3>
             Collection of same-type elements.<br>
             1D: <code>int a[5] = {10, 20};</code><br>
@@ -169,7 +169,7 @@ int main() {
 struct Student s1;
 s1.id = 101;</code>
         </div>
-        <div class="note note-orange">
+        <div class="note note-green">
             <h3>Unions</h3>
             Collection of different data types in the same memory location. Only one member can hold a value at any
             given time.
@@ -178,7 +178,7 @@ s1.id = 101;</code>
     char str[20];
 };</code>
         </div>
-        <div class="note note-yellow">
+        <div class="note note-blue">
             <h3>Typedef</h3>
             Creates an alias for a data type.<br>
             <code>typedef struct {
@@ -188,7 +188,7 @@ s1.id = 101;</code>
 Student s1;</code>
         </div>
 
-        <div class="note note-green">
+        <div class="note note-pink">
             <h3>Enum</h3>
             Assigns names to integer constants.<br>
             <code>enum Day {SUN, MON};
@@ -196,7 +196,7 @@ enum Day d = MON;</code><br>
             <b>Note:</b> Sturcture, Union and Enum are user-defined data types.
         </div>
 
-        <div class="note note-blue">
+        <div class="note note-yellow">
             <h3>File Handling</h3>
             <code>FILE *fp;
 fp = fopen("file.txt", "w");
@@ -206,7 +206,7 @@ fscanf(fp, "%d", &var);
 
 fclose(fp);</code>
         </div>
-        <div class="note note-purple">
+        <div class="note note-green">
             <h3>File Modes</h3>
             <ul>
                 <li><b>"r":</b> Read Only (must exist)</li>
@@ -217,7 +217,7 @@ fclose(fp);</code>
                 <li><b>"a+":</b> Append & Read</li>
             </ul>
         </div>
-        <div class="note note-pink">
+        <div class="note note-blue">
             <h3>Recursion</h3>
             A function that calls itself.<br>
             <code>return_type func(params) {

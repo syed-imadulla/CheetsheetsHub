@@ -52,13 +52,13 @@ int main() {
             </ul>
         </div>
 
-        <div class="note note-pink">
+        <div class="note note-blue">
             <h3>Variables</h3>
             Declaration: <br><code>int age;</code><br>
             Initialization: <br><code>char grade = 'A';</code>
         </div>
 
-        <div class="note note-purple">
+        <div class="note note-pink">
             <h3>cout & cin</h3>
             <ul>
                 <li>
@@ -74,7 +74,7 @@ int main() {
             </ul>
         </div>
 
-        <div class="note note-blue">
+        <div class="note note-purple">
             <h3>Data Types & Ranges</h3>
             <ul>
                 <li><b>Sizes:</b> int(4), float(4), double(8), char(1) bytes</li>
@@ -85,7 +85,7 @@ int main() {
             </ul>
         </div>
 
-        <div class="note note-purple">
+        <div class="note note-orange">
             <h3>Operators</h3>
             <ul>
                 <li><b>Arithmetic:</b> <code>+ - * / %</code></li>
@@ -95,7 +95,7 @@ int main() {
             </ul>
         </div>
 
-        <div class="note note-orange">
+        <div class="note note-blue">
             <h3>Type Conversion</h3>
             <b>Implicit:</b> Low → High, safe<br>
             <code>int a = 5; float b = a;</code><br>
@@ -103,7 +103,7 @@ int main() {
             <code>int a = (int)5.5;</code>
         </div>
 
-        <div class="note note-yellow">
+        <div class="note note-pink">
             <h3>Control Structures</h3>
             <ul>
                 <li><b>Conditional:</b> <br><code>if, else if, else</code></li>
@@ -113,14 +113,14 @@ int main() {
             </ul>
         </div>
 
-        <div class="note note-green">
+        <div class="note note-purple">
             <h3>Functions</h3>
             Declaration: <br><code>int add(int, int);</code><br>
             Call: <br><code>sum = add(5, 3);</code><br>
             Supports call by value & call by reference.
         </div>
 
-        <div class="note note-pink">
+        <div class="note note-orange">
             <h3>Types of Functions</h3>
             <ul>
                 <li>1. No args & no return</li>
@@ -130,7 +130,32 @@ int main() {
             </ul>
         </div>
 
-        <div class="note note-blue">
+        <div class="note note-yellow">
+            <h3>References</h3>
+            Provides an alias for existing variables
+            <code>int var = 12;
+int& ref = var;  //Reference</code>
+            <ul>
+                <li>1. Declared with <code>&</code> operator</li>
+                <li>2. Manipulates original value directly</li>
+                <li>3. Must be initialized when declared</li>
+                <li>4. Cannot be reassigned</li>
+            </ul>
+        </div>
+
+        <div class="note note-green">
+            <h3>Vectors</h3>
+            Dynamic arrays from STL
+            <code>#include &lt;vector&gt;
+vector&lt;datatype&gt; vector_name;</code><br>
+            Commonly used Vector Functions are
+            <code>push_back(), pop_back(), 
+at(i), size(), clear()</code>
+
+            <p>Automatically resizes when modified</p>
+        </div>
+
+        <div class="note note-purple">
             <h3>Pointers</h3>
             Stores memory address of another variable.<br>
             <code>int x = 10;<br>int *ptr = &x;<br>*ptr = 20;</code>
@@ -138,21 +163,21 @@ int main() {
             *ptr gets the value at x.
         </div>
 
-        <div class="note note-pink">
+        <div class="note note-orange">
             <h3>Arrays</h3>
             Collection of same-type elements.<br>
             1D: <code>int a[3] = {10, 20, 30};</code><br>
             2D: <code>int b[2][3] = {<br>{1, 2, 3},<br>{4, 5, 6}<br>};</code>
         </div>
 
-        <div class="note note-purple">
+        <div class="note note-yellow">
             <h3>Strings</h3>
             Array of characters ending with `\0`.<br>
             <code>string name[] = "Imad";</code><br>
             use &lt;string&gt; class for string functions like <code>length(), append(), substr().</code><br>
         </div>
 
-        <div class="note note-orange">
+        <div class="note note-green">
             <h3>String I/O Functions</h3>
             <ul>
                 <li><code>getline(cin, str)</code> - Reads full line (including spaces)</li>
@@ -162,7 +187,7 @@ int main() {
             </ul>
         </div>
 
-        <div class="note note-yellow">
+        <div class="note note-blue">
             <h3>Structures</h3>
             Collection of different data types. Each member has its own memory location.<br>
             <code>struct Student {
@@ -172,7 +197,7 @@ int main() {
 struct Student s1;
 s1.id = 101;</code>
         </div>
-        <div class="note note-orange">
+        <div class="note note-pink">
             <h3>Unions</h3>
             Collection of different data types in the same memory location. Only one member can hold a value at any
             given time.
@@ -198,7 +223,8 @@ Student s1;</code>
 enum Day d = MON;</code><br>
             <b>Note:</b> Sturcture, Union and Enum are user-defined data types.
         </div>
-        <div class="note note-green">
+
+        <div class="note note-blue">
             <h3>Classes & Objects</h3>
             Classes are blueprint for creating objects.<br>
             <code>class MyClass {
@@ -211,7 +237,7 @@ MyClass obj;
 obj.display();</code>
         </div>
 
-        <div class="note note-blue">
+        <div class="note note-pink">
             <h3>OOP Concepts</h3>
             <ul>
                 <li><b>Encapsulation:</b> Hide data (3 P's)</li>
@@ -221,56 +247,60 @@ obj.display();</code>
             </ul>
         </div>
 
-        <div class="note note-yellow">
+        <div class="note note-purple">
             <h3>File Basics</h3>
             <code>#include &lt;fstream&gt;
-    // Write
-ofstream out("file.txt"); 
-    // Read
-ifstream in("file.txt"); 
-    // Both
-fstream file("file.txt"); </code>
+int main() {
+    // Create and open file
+    ofstream MyFile("f.txt");
+ 
+    // Write to the file
+    MyFile <<"Hello! world";
+ 
+    // Close the file
+    MyFile.close();
+} </code>
         </div>
+
+        <div class="note note-orange">
+            <h3>File Operations</h3>
+            <code>#include &lt;fstream&gt;
+ofstream outFile("f.txt");</code>
+            <ul>
+                <li><code>file << data</code> - Write data</li>
+                <li><code>file >> var</code> - Read data</li>
+                <li><code>getline(file, str)</code> - Read line</li>
+                <li><code>file.close()</code> - Close file</li>
+                <li><code>file.is_open()</code> - Check status</li>
+            </ul>
+        </div>
+
         <div class="note note-blue">
-    <h3>File Handling</h3>
-    <table style="width:100%; font-size:0.9em;">
-        <tr>
-            <th>Operations</th>
-            <th>Modes</th>
-        </tr>
-        <tr>
-            <td><code>file << data</code></td>
-            <td><code>ios::in</code></td>
-        </tr>
-        <tr>
-            <td><code>file >> var</code></td>
-            <td><code>ios::out</code></td>
-        </tr>
-        <tr>
-            <td><code>getline()</code></td>
-            <td><code>ios::app</code></td>
-        </tr>
-        <tr>
-            <td><code>close()</code></td>
-            <td><code>ios::binary</code></td>
-        </tr>
-    </table>
-    <div style="margin-top:8px; text-align:center; font-size:0.8em;">
-        <code>#include &lt;fstream&gt;</code>
-    </div>
-</div>
+            <h3>File Modes</h3>
+            <code>fstream file;
+file.open("f.txt",ios::out);</code>
+            <ul>
+                <li><code>ios::in</code> - Read mode</li>
+                <li><code>ios::out</code> - Write mode</li>
+                <li><code>ios::app</code> - Append mode</li>
+                <li><code>ios::ate</code> - Start at end</li>
+                <li><code>ios::binary</code> - Binary mode</li>
+            </ul>
+        </div>
 
         <div class="note note-pink">
             <h3>Exception Handling</h3>
             Handles runtime errors gracefully without stopping program execution.<br>
-            <code>try {
-  throw 1; 
-}catch (int e) { 
-  cout << e; 
+            <code>try{
+  //code to try
+  throw exception; 
+}
+catch(){
+  //code to handle errors
 }</code>
         </div>
 
-        <div class="note note-orange">
+        <div class="note note-purple">
             <h3>Recursion</h3>
             A function that calls itself.<br>
             <code>return_type func(params) {
