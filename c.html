@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
+<body id="top">
     <!-- Preloader -->
     <div id="preloader">
         <div class="loader"></div>
@@ -31,6 +31,9 @@
     </nav>
 
     <h1>C-Programming Cheatsheet</h1>
+    <a href="javascript:history.back()" class="note-link note-blue back-button">⬅ Back</a>
+
+
     <div class="notes-container">
 
         <div class="note note-yellow">
@@ -229,6 +232,9 @@ fclose(fp);</code>
         </div>
 
     </div>
+    <a href="#top" class="note-link note-yellow" id="backToTopBtn">
+        ⬆ Back to Top
+    </a>
     <script>
         window.addEventListener("load", function () {
             document.getElementById("preloader").style.display = "none";
