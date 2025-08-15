@@ -6,7 +6,7 @@ body {
     background-image: radial-gradient(#a9a9a9 1px, transparent 1px);
     background-size: 20px 20px;
     margin: 0;
-    padding: 15px;
+    /* padding: 15px; */
 }
 
 /* Navbar Styles */

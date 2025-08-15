@@ -6,7 +6,7 @@ body {
   background-image: radial-gradient(#a9a9a9 1px, transparent 1px);
   background-size: 20px 20px;
   margin: 0;
-  padding: 15px;
+  /* padding: 15px; */
 }
 
 .navbar {
@@ -141,7 +141,7 @@ h1 {
   font-family: 'Courier New', Courier, monospace;
   background-color: rgba(0, 0, 0, 0.1);
   padding: 2px 4px;
-  border-radius: 3px;
+  border-radius: 3px; 
   font-size: 14px;
   display: inline-block;
   white-space: pre;
