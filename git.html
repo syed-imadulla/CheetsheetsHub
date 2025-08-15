@@ -5,237 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Git Commands Cheatsheet</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap');
-
-        body {
-            font-family: 'Kalam', cursive;
-            background-color: #ffffff;
-            background-image: radial-gradient(#a9a9a9 1px, transparent 1px);
-            background-size: 20px 20px;
-            margin: 0;
-            padding: 15px;
-        }
-
-        /* Navbar Styles */
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 12px 20px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background-color: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(4px);
-            border: 3px solid #999;
-            border-radius: 10px;
-            box-shadow: 4px 4px 10px rgba(33, 33, 33, 0.5);
-            margin: 8px 10px;
-        }
-
-        .nav-logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-family: 'Kalam', cursive;
-            font-size: 24px;
-            font-weight: bold;
-            color: #333;
-            text-decoration: none;
-        }
-
-        .nav-logo img {
-            height: 40px;
-            width: auto;
-            border-radius: 6px;
-            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
-        }
-
-        .nav-links {
-            list-style: none;
-            display: flex;
-            gap: 12px;
-            margin: 0;
-            padding: 0;
-        }
-
-        .note-link {
-            display: inline-block;
-            padding: 8px 14px;
-            font-family: 'Kalam', cursive;
-            font-size: 16px;
-            color: #333;
-            text-decoration: none;
-            box-shadow: 3px 3px 5px rgba(33, 33, 33, .3);
-            border-radius: 6px;
-            transform: rotate(-1deg);
-            transition: transform 0.15s ease, box-shadow 0.15s ease;
-        }
-
-        .note-link:hover {
-            transform: scale(1.05) rotate(1deg);
-            box-shadow: 5px 5px 8px rgba(33, 33, 33, .4);
-        }
-
-        /* Sticky-note colors for nav buttons */
-        .note-yellow {
-            background-color: #fff8b3;
-        }
-
-        .note-green {
-            background-color: #d4ffb3;
-        }
-
-        .note-blue {
-            background-color: #b3e0ff;
-        }
-
-        .note-pink {
-            background-color: #ffb3d1;
-        }
-
-        .note-purple {
-            background-color: #e6b3ff;
-        }
-
-        .note-orange {
-            background-color: #ffc4b3;
-        }
-
-        /* Cheatsheet Content */
-        .sheet {
-            max-width: 21cm;
-            margin: 20px auto;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.9);
-            box-shadow: 0 0 17px rgba(33,33,33,0.5);
-            border-radius: 10px;
-        }
-
-        h1 {
-            text-align: center;
-            font-family: 'Kalam', cursive;
-            color: #333;
-            margin-top: 20px;
-        }
-
-        .note {
-            padding: 15px;
-            margin-bottom: 15px;
-            border-radius: 6px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-            /* transform: rotate(-1deg); */
-            /* transition: transform 0.2s ease; */
-        }
-
-        /* Sticky note colors */
-        .note-yellow {
-            background: #fff8b3;
-        }
-
-        .note-green {
-            background: #d4ffb3;
-        }
-
-        .note-blue {
-            background: #b3e0ff;
-        }
-
-        .note-pink {
-            background: #ffb3d1;
-        }
-
-        .npte-purple {
-            background: #e6b3ff;
-        }
-
-        .note-orange {
-            background: #ffc4b3;
-        }
-
-        h2 {
-            margin-top: 0;
-            font-size: 1.2rem;
-            border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
-            padding-bottom: 5px;
-        }
-
-        pre {
-            font-family: 'Courier New', Courier, monospace;
-            background: rgba(255, 255, 255, 0.4);
-            padding: 10px;
-            border-radius: 4px;
-            overflow-x: auto;
-            margin: 10px 0;
-        }
-
-        code {
-            white-space: pre-wrap;
-            line-height: 1.4;
-        }
-
-        p {
-            font-size: 0.85rem;
-            margin: 6px 0 0;
-        }
-
-        .command-group {
-            margin: 8px 0;
-        }
-
-        .command-desc {
-            font-size: 0.8rem;
-            color: #555;
-            font-style: italic;
-            margin-left: 10px;
-        }
-
-        /* Back Button */
-        .back-button {
-            margin-bottom: 20px;
-            display: inline-block;
-        }
-
-        /* Top Button */
-        #backToTopBtn {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 99;
-            text-decoration: none;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        @media print {
-            body {
-                background: none;
-                font-size: 10pt;
-                padding: 0;
-            }
-
-            .navbar,
-            #backToTopBtn {
-                display: none;
-            }
-
-            .sheet {
-                padding: 0;
-                margin: 0;
-                max-width: 100%;
-            }
-
-            .note {
-                box-shadow: none;
-                border: 1px solid #ddd;
-                transform: none !important;
-                page-break-inside: avoid;
-            }
-        }
-    </style>
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="git.css">
 </head>
 
 <body id="top">
@@ -252,11 +23,18 @@
         </a>
         <ul class="nav-links">
             <li><a href="index.html" class="note-link note-pink">Home</a></li>
-            <li><a href="c.html" class="note-link note-yellow">C</a></li>
-            <li><a href="cpp.html" class="note-link note-green">C++</a></li>
-            <li><a href="python.html" class="note-link note-purple">Python</a></li>
-            <li><a href="javascript.html" class="note-link note-orange">JavaScript</a></li>
+            <li class="dropdown">
+                <a href="#p_lang" class="note-link note-green dropbtn">Programming Languages</a>
+                <div class="dropdown-content">
+                    <a href="c.html" class="note-link note-yellow">C Language</a>
+                    <a href="cpp.html" class="note-link note-green">C++</a>
+                    <a href="python.html" class="note-link note-purple">Python</a>
+                    <a href="javascript.html" class="note-link note-orange">JavaScript</a>
+                </div>
+            </li>
+            <li><a href="git.html" class="note-link note-purple">Git Commands</a></li>
             <li><a href="login.html" class="note-link note-blue">Login</a></li>
+
         </ul>
     </nav>
     <a href="javascript:history.back()" class="note-link note-blue back-button">⬅ Back</a>
