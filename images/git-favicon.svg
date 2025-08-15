@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Blue sticky note background -->
+  <rect x="0" y="0" width="200" height="200" rx="20" ry="20" fill="#2980b9" stroke="#1f618d" stroke-width="4"/>
+  
+  <!-- Git text -->
+  <text x="50%" y="55%" font-family="Kalam, sans-serif" font-size="64" font-weight="bold" fill="white" text-anchor="middle" dominant-baseline="middle">
+    Git
+  </text>
+</svg>
