@@ -122,12 +122,6 @@ Contributions are welcome.
 
 ---
 
-## 📄 License
-
-This project is free and open. Add an MIT License file if needed.
-
----
-
 ## 💡 About
 
 A clean and simple hub of programming cheatsheets in a sticky‑note style. Includes C, C++, Python, JavaScript, and Git references. Fully responsive and easy to use.
